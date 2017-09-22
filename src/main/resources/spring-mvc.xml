@@ -13,7 +13,9 @@
     <mvc:annotation-driven/>
 
     <!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 -->
-    <context:component-scan base-package="java"/>
+    <context:component-scan base-package="controller"/>
+       <context:component-scan base-package="dao"/>
+       <context:component-scan base-package="service"/>
 
     <bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
         <property name="defaultLocale" value="zh_CN" />
